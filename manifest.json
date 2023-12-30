@@ -1,0 +1,34 @@
+{
+    "name" : "Signature Extention",
+    "manifest_version" : 3,
+    "description": "Allows you to add a signature and imprint it on a pdf",
+    "version": "1.0",
+    
+    "content_scripts": [
+        {
+          "js": ["scripts/content.js"],
+          "matches": [
+            "https://developer.chrome.com/docs/extensions/*",
+            "https://developer.chrome.com/docs/webstore/*"
+          ]
+        }
+    ],
+
+    "icons" : {
+        "32": "assets/icon-32.png",
+        "48": "assets/icon-64.png"
+    },
+    
+    "action": {
+        "default_icon": {
+            "32": "assets/icon-32.png",
+            "48": "assets/icon-64.png"
+        },
+        "default_popup":"popup.html",
+        "default_title":"Signature Extention"
+    },
+
+    "background": {
+        "service_worker": "background.js"
+    }
+}

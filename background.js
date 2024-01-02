@@ -1,3 +1,6 @@
-console.log("I work in background");
-console.log(this);
-console.log("trying something here");
+chrome.action.onClicked.addListener((tab) => {
+  chrome.scripting.executeScript({
+    target: { tabId: tab.id },
+    files: ["./scripts/content.js"],
+  });
+});

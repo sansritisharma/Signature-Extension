@@ -8,9 +8,9 @@
         {
           "js": ["scripts/content.js"],
           "matches": [
-            "https://developer.chrome.com/docs/extensions/*",
-            "https://developer.chrome.com/docs/webstore/*"
-          ]
+            "<all_urls>"
+          ],
+          "css": ["content.css"]
         }
     ],
 
@@ -24,11 +24,24 @@
             "32": "assets/icon-32.png",
             "48": "assets/icon-64.png"
         },
-        "default_popup":"popup.html",
+        "default_popup":"./popup/popup.html",
         "default_title":"Signature Extension"
     },
+    "permissions": ["activeTab","tabs","storage", "scripting"],
 
     "background": {
         "service_worker": "background.js"
-    }
+    },
+    "web_accessible_resources": [
+        {
+          "resources": [
+            "create.html",
+            "create.js",
+            "create.css"
+          ],
+          "matches": ["<all_urls>"]
+        }
+      ]    
 }
+
+

@@ -1,0 +1,37 @@
+/* Style for Canvas */
+
+canvas {  
+    background-color: #fff;
+    border-radius: 15px;
+    border: 5px solid black; 
+    width: 400px;
+  }
+  
+  #canvas-wrap {
+    position: relative;
+   
+  }
+  
+   #download, #clear {
+          position: relative;
+          top: 0;
+          left: 170px;
+          padding: 10px;
+          background-color: #57c4e5;
+          border: 3px solid black;
+          color: black;
+          display: block-inline;
+          margin-top: 5px;
+          margin-right:5px;
+          transition: .3s;
+        }
+  
+  #download:hover, #clear:hover {
+    background-color: transparent;
+  }
+  
+  #text {
+    position:relative;
+    font-weight: bold;
+    left: 190px;
+  }

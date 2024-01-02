@@ -4,15 +4,7 @@
     "description": "Allows you to add a signature and imprint it on a pdf",
     "version": "1.0",
     
-    "content_scripts": [
-        {
-          "js": ["scripts/content.js"],
-          "matches": [
-            "<all_urls>"
-          ],
-          "css": ["content.css"]
-        }
-    ],
+    
 
     "icons" : {
         "32": "assets/icon-32.png",
@@ -29,9 +21,7 @@
     },
     "permissions": ["activeTab","tabs","storage", "scripting"],
 
-    "background": {
-        "service_worker": "background.js"
-    },
+    
     "web_accessible_resources": [
         {
           "resources": [
